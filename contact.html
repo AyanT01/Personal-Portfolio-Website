@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Additional inline styles for contact form */
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact label {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        
+        .contact input, .contact textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .contact button {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .contact button[type="reset"] {
+            background-color: #f1f1f1;
+            color: #333;
+            margin-left: 10px;
+        }
+        
+        .contact .button-group {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 20px;
+        }
+        
+        .contact-info {
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        #status-message {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+        
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html#about">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="resume.html">Resume</a>
+            <a href="skills.html">Skills</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="contact" id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form" action="https://formsubmit.co/abdulhaqayantayo@gmail.com" method="POST">
+                <!-- Optional FormSubmit.co honeypot to prevent spam -->
+                <input type="text" name="_honey" style="display:none">
+                
+                <!-- Disable captcha -->
+                <input type="hidden" name="_captcha" value="false">
+                
+                <!-- Redirect after submission -->
+                <input type="hidden" name="_next" value="https://tenor.com/rxfP4BlTKbj.gif">
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Please enter a valid email address.">
+                
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+                
+                <div class="button-group">
+                    <button type="submit">Send Message</button>
+                    <button type="reset">Clear Form</button>
+                </div>
+            </form>
+            
+            <div id="status-message"></div>
+            
+            <div class="contact-info">
+                <p>You can also reach me directly at: <a href="mailto:abdulhaqayantayo@gmail.com">abdulhaqayantayo@gmail.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Abdul Haq Ayantayo. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
